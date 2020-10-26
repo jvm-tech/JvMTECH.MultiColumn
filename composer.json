@@ -1,0 +1,39 @@
+{
+    "name": "jvmtech/multicolumn",
+    "description": "Multicolumn grid for Neos CMS",
+    "type": "neos-plugin",
+    "license": "MIT",
+    "keywords": [
+        "neoscms",
+        "flow-framework",
+        "fusion",
+        "tailwindcss",
+        "bootstrap",
+        "multicolumn",
+        "grid"
+    ],
+    "authors": [
+        {
+            "name": "Samuel Hauser",
+            "email": "samuel.hauser@jvm.ch"
+        }
+    ],
+    "replace": {
+        "webexcess/multicolumn": "*"
+    },
+    "require": {
+        "neos/neos": ">=5.3",
+        "webexcess/label": "~2.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "JvMTECH\\MultiColumn\\": "Classes/"
+        }
+    },
+    "extra": {
+        "installer-name": "JvMTECH.MultiColumn",
+        "neos": {
+            "package-key": "JvMTECH.MultiColumn"
+        }
+    }
+}

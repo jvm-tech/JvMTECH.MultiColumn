@@ -1,0 +1,19 @@
+prototype(JvMTECH.MultiColumn:Prototype.Class.Break.Tailwind) < prototype(Neos.Fusion:Component) {
+    show = Neos.Fusion:DataStructure {
+        xs = false
+        sm = false
+        md = false
+        lg = false
+        xl = false
+    }
+
+    renderer = Neos.Fusion:DataStructure {
+        element = 'multicolumn-break'
+        width = 'w-full'
+        xs = ${props.show.xs ? 'block' : 'hidden'}
+        sm = ${props.show.sm ? 'sm:block' : 'sm:hidden'}
+        md = ${props.show.md ? 'md:block' : 'md:hidden'}
+        lg = ${props.show.lg ? 'lg:block' : 'lg:hidden'}
+        xl = ${props.show.xl ? 'xl:block' : 'xl:hidden'}
+    }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "jvmtech-multicolumn",
+  "version": "1.0.0",
+  "author": "Samuel Hauser <samuel.hauser@jvm.ch>",
+  "license": "MIT",
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not ie <= 10",
+    "not ie_mob <= 10",
+    "not bb <= 10",
+    "not op_mob <= 12.1"
+  ],
+  "scripts": {
+    "clean": "rimraf Resources/Public",
+    "compile": "postcss Resources/Private/Assets/MultiColumn.pcss --output Resources/Public/MultiColumn.css",
+    "minify": "cleancss --source-map --source-map-inline-sources --output Resources/Public/MultiColumn.css Resources/Public/MultiColumn.css",
+    "dev": "npm run compile -- --watch",
+    "build": "npm run clean && npm run compile && npm run minify",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.0.1",
+    "clean-css-cli": "^4.3.0",
+    "postcss": "^8.1.4",
+    "postcss-cli": "^8.1.0",
+    "postcss-nested": "^5.0.1"
+  }
+}

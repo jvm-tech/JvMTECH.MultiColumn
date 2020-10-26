@@ -1,0 +1,21 @@
+prototype(JvMTECH.MultiColumn:Content.Row) < prototype(Neos.Neos:ContentComponent) {
+    class = JvMTECH.MultiColumn:Prototype.Class.Row
+    renderer = afx`<div class={props.class}><Neos.Neos:ContentCollectionRenderer /></div>`
+    renderer.@process.wrap = afx`<div class="jvmtech-multicolumn"><Neos.Fusion:Augmenter data-__neos-insertion-anchor>{value}</Neos.Fusion:Augmenter></div>`
+    renderer.@process.wrap.@if.backend = ${node.context.inBackend}
+
+    @cache {
+        mode = 'cached'
+
+        entryIdentifier {
+            node = ${node}
+            documentNode = ${documentNode}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+        }
+
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+            2 = ${Neos.Caching.descendantOfTag(node)}
+        }
+    }
+}

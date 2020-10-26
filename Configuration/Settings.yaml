@@ -1,0 +1,15 @@
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          JvMTECH.MultiColumn: ['Main', 'NodeTypes/*']
+    fusion:
+      autoInclude:
+        JvMTECH.MultiColumn: true
+
+JvMTECH:
+  MultiColumn:
+    framework: 'tailwindcss' # 'tailwindcss' or 'bootstrap'
+    gap: 4 # column gap
+    includeCss: true

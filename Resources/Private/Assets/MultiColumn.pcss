@@ -1,0 +1,33 @@
+@define-mixin collection {
+    height: 24px;
+    width: 100%;
+    border: 2px solid #adadad;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.jvmtech-multicolumn {
+    .multicolumn-row[data-__neos-insertion-anchor]:empty,
+    .multicolumn-col:empty::after {
+        height: 24px;
+        width: 100%;
+        border: 2px solid #adadad;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+    }
+
+    .multicolumn-col:empty::after {
+        display: block;
+        content: '';
+        margin-bottom: 10px;
+    }
+
+    .multicolumn-break {
+        text-align: center;
+        padding: 5px 0;
+    }
+}

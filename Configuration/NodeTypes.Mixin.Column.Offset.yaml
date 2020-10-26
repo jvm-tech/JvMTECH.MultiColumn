@@ -1,0 +1,221 @@
+JvMTECH.MultiColumn:Mixin.Column.Offset:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Column.Offset.All: true
+    JvMTECH.MultiColumn:Mixin.Column.Offset.SM: true
+    JvMTECH.MultiColumn:Mixin.Column.Offset.MD: true
+    JvMTECH.MultiColumn:Mixin.Column.Offset.LG: true
+    JvMTECH.MultiColumn:Mixin.Column.Offset.XL: true
+
+JvMTECH.MultiColumn:Mixin.Column.Offset.Group:
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        offset:
+          label: 'JvMTECH.MultiColumn:NodeTypes.Content.Column:groups.offset'
+
+JvMTECH.MultiColumn:Mixin.Column.Offset.All:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Column.Offset.Group: true
+  properties:
+    offset:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.all'
+        reloadIfChanged: true
+        inspector:
+          group: 'offset'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'offset-0'
+              1:
+                label: 'offset-1'
+              2:
+                label: 'offset-2'
+              3:
+                label: 'offset-3'
+              4:
+                label: 'offset-4'
+              5:
+                label: 'offset-5'
+              6:
+                label: 'offset-6'
+              7:
+                label: 'offset-7'
+              8:
+                label: 'offset-8'
+              9:
+                label: 'offset-9'
+              10:
+                label: 'offset-10'
+              11:
+                label: 'offset-11'
+
+JvMTECH.MultiColumn:Mixin.Column.Offset.SM:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Column.Offset.Group: true
+  properties:
+    offset-sm:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.sm'
+        reloadIfChanged: true
+        inspector:
+          group: 'offset'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'offset-sm-0'
+              1:
+                label: 'offset-sm-1'
+              2:
+                label: 'offset-sm-2'
+              3:
+                label: 'offset-sm-3'
+              4:
+                label: 'offset-sm-4'
+              5:
+                label: 'offset-sm-5'
+              6:
+                label: 'offset-sm-6'
+              7:
+                label: 'offset-sm-7'
+              8:
+                label: 'offset-sm-8'
+              9:
+                label: 'offset-sm-9'
+              10:
+                label: 'offset-sm-10'
+              11:
+                label: 'offset-sm-11'
+
+JvMTECH.MultiColumn:Mixin.Column.Offset.MD:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Column.Offset.Group: true
+  properties:
+    offset-md:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.md'
+        reloadIfChanged: true
+        inspector:
+          group: 'offset'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'offset-md-0'
+              1:
+                label: 'offset-md-1'
+              2:
+                label: 'offset-md-2'
+              3:
+                label: 'offset-md-3'
+              4:
+                label: 'offset-md-4'
+              5:
+                label: 'offset-md-5'
+              6:
+                label: 'offset-md-6'
+              7:
+                label: 'offset-md-7'
+              8:
+                label: 'offset-md-8'
+              9:
+                label: 'offset-md-9'
+              10:
+                label: 'offset-md-10'
+              11:
+                label: 'offset-md-11'
+
+JvMTECH.MultiColumn:Mixin.Column.Offset.LG:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Column.Offset.Group: true
+  properties:
+    offset-lg:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.lg'
+        reloadIfChanged: true
+        inspector:
+          group: 'offset'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'offset-lg-0'
+              1:
+                label: 'offset-lg-1'
+              2:
+                label: 'offset-lg-2'
+              3:
+                label: 'offset-lg-3'
+              4:
+                label: 'offset-lg-4'
+              5:
+                label: 'offset-lg-5'
+              6:
+                label: 'offset-lg-6'
+              7:
+                label: 'offset-lg-7'
+              8:
+                label: 'offset-lg-8'
+              9:
+                label: 'offset-lg-9'
+              10:
+                label: 'offset-lg-10'
+              11:
+                label: 'offset-lg-11'
+
+JvMTECH.MultiColumn:Mixin.Column.Offset.XL:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Column.Offset.Group: true
+  properties:
+    offset-xl:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.xl'
+        reloadIfChanged: true
+        inspector:
+          group: 'offset'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'offset-xl-0'
+              1:
+                label: 'offset-xl-1'
+              2:
+                label: 'offset-xl-2'
+              3:
+                label: 'offset-xl-3'
+              4:
+                label: 'offset-xl-4'
+              5:
+                label: 'offset-xl-5'
+              6:
+                label: 'offset-xl-6'
+              7:
+                label: 'offset-xl-7'
+              8:
+                label: 'offset-xl-8'
+              9:
+                label: 'offset-xl-9'
+              10:
+                label: 'offset-xl-10'
+              11:
+                label: 'offset-xl-11'

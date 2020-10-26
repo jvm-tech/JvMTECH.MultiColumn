@@ -1,0 +1,242 @@
+JvMTECH.MultiColumn:Mixin.Column.Width:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Column.Width.All: true
+    JvMTECH.MultiColumn:Mixin.Column.Width.SM: true
+    JvMTECH.MultiColumn:Mixin.Column.Width.MD: true
+    JvMTECH.MultiColumn:Mixin.Column.Width.LG: true
+    JvMTECH.MultiColumn:Mixin.Column.Width.XL: true
+
+JvMTECH.MultiColumn:Mixin.Column.Width.Group:
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        width:
+          label: 'JvMTECH.MultiColumn:NodeTypes.Content.Column:groups.width'
+
+JvMTECH.MultiColumn:Mixin.Column.Width.All:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Column.Width.Group: true
+  properties:
+    width:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.all'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              col:
+                label: 'col'
+              1:
+                label: '1/12'
+              2:
+                label: '2/12'
+              3:
+                label: '3/12'
+              4:
+                label: '4/12'
+              5:
+                label: '5/12'
+              6:
+                label: '6/12'
+              7:
+                label: '7/12'
+              8:
+                label: '8/12'
+              9:
+                label: '9/12'
+              10:
+                label: '10/12'
+              11:
+                label: '11/12'
+              12:
+                label: '12/12'
+              auto:
+                label: 'auto'
+
+JvMTECH.MultiColumn:Mixin.Column.Width.SM:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Column.Width.Group: true
+  properties:
+    width-sm:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.sm'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              col:
+                label: 'col'
+              1:
+                label: '1/12'
+              2:
+                label: '2/12'
+              3:
+                label: '3/12'
+              4:
+                label: '4/12'
+              5:
+                label: '5/12'
+              6:
+                label: '6/12'
+              7:
+                label: '7/12'
+              8:
+                label: '8/12'
+              9:
+                label: '9/12'
+              10:
+                label: '10/12'
+              11:
+                label: '11/12'
+              12:
+                label: '12/12'
+              auto:
+                label: 'auto'
+
+JvMTECH.MultiColumn:Mixin.Column.Width.MD:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Column.Width.Group: true
+  properties:
+    width-md:
+      type: string
+      defaultValue: 'col'
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.md'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              col:
+                label: 'col'
+              1:
+                label: '1/12'
+              2:
+                label: '2/12'
+              3:
+                label: '3/12'
+              4:
+                label: '4/12'
+              5:
+                label: '5/12'
+              6:
+                label: '6/12'
+              7:
+                label: '7/12'
+              8:
+                label: '8/12'
+              9:
+                label: '9/12'
+              10:
+                label: '10/12'
+              11:
+                label: '11/12'
+              12:
+                label: '12/12'
+              auto:
+                label: 'auto'
+
+JvMTECH.MultiColumn:Mixin.Column.Width.LG:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Column.Width.Group: true
+  properties:
+    width-lg:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.lg'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              col:
+                label: 'col'
+              1:
+                label: '1/12'
+              2:
+                label: '2/12'
+              3:
+                label: '3/12'
+              4:
+                label: '4/12'
+              5:
+                label: '5/12'
+              6:
+                label: '6/12'
+              7:
+                label: '7/12'
+              8:
+                label: '8/12'
+              9:
+                label: '9/12'
+              10:
+                label: '10/12'
+              11:
+                label: '11/12'
+              12:
+                label: '12/12'
+              auto:
+                label: 'auto'
+
+JvMTECH.MultiColumn:Mixin.Column.Width.XL:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Column.Width.Group: true
+  properties:
+    width-xl:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.xl'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              col:
+                label: 'col'
+              1:
+                label: '1/12'
+              2:
+                label: '2/12'
+              3:
+                label: '3/12'
+              4:
+                label: '4/12'
+              5:
+                label: '5/12'
+              6:
+                label: '6/12'
+              7:
+                label: '7/12'
+              8:
+                label: '8/12'
+              9:
+                label: '9/12'
+              10:
+                label: '10/12'
+              11:
+                label: '11/12'
+              12:
+                label: '12/12'
+              auto:
+                label: 'auto'

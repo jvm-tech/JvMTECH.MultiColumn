@@ -1,0 +1,19 @@
+prototype(JvMTECH.MultiColumn:Prototype.Class.Break.Bootstrap) < prototype(Neos.Fusion:Component) {
+    show = Neos.Fusion:DataStructure {
+        xs = false
+        sm = false
+        md = false
+        lg = false
+        xl = false
+    }
+
+    renderer = Neos.Fusion:DataStructure {
+        element = 'multicolumn-break'
+        width = 'w-100'
+        xs = ${props.show.xs ? 'd-block' : 'd-none'}
+        sm = ${props.show.sm ? 'd-sm-block' : 'd-sm-none'}
+        md = ${props.show.md ? 'd-md-block' : 'd-md-none'}
+        lg = ${props.show.lg ? 'd-lg-block' : 'd-lg-none'}
+        xl = ${props.show.xl ? 'd-xl-block' : 'd-xl-none'}
+    }
+}

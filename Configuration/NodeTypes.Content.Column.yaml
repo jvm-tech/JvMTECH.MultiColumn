@@ -1,0 +1,16 @@
+JvMTECH.MultiColumn:Content.Column:
+  superTypes:
+    Neos.Neos:Content: true
+    Neos.Neos:ContentCollection: true
+    WebExcess.Label:Show: true
+    JvMTECH.MultiColumn:Mixin.Column.Width: true
+    JvMTECH.MultiColumn:Mixin.Column.Offset: true
+  ui:
+    label: i18n
+    icon: 'fas fa-columns'
+    position: 100
+    group: 'structure'
+    inlineEditable: true
+  constraints:
+    nodeTypes:
+      JvMTECH.MultiColumn:Content.Row: false

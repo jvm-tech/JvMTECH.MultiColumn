@@ -1,0 +1,24 @@
+prototype(JvMTECH.MultiColumn:Prototype.Class.Row) < prototype(Neos.Fusion:Component) {
+    alignment = Neos.Fusion:DataStructure {
+        xs = ${q(node).property('alignment')}
+        sm = ${q(node).property('alignment-sm')}
+        md = ${q(node).property('alignment-md')}
+        lg = ${q(node).property('alignment-lg')}
+        xl = ${q(node).property('alignment-xl')}
+    }
+
+    renderer = Neos.Fusion:Case {
+        bootstrap {
+            condition = ${Configuration.setting('JvMTECH.MultiColumn.framework') == 'bootstrap'}
+            renderer = JvMTECH.MultiColumn:Prototype.Class.Row.Bootstrap {
+                @apply.props = ${props}
+            }
+        }
+        tailwindcss {
+            condition = ${true}
+            renderer = JvMTECH.MultiColumn:Prototype.Class.Row.Tailwind {
+                @apply.props = ${props}
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+up:
+  comments: 'Rename node types'
+  migration:
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'WebExcess.MultiColumn:ContentCollection.Row'
+      transformations:
+        - type: 'ChangeNodeType'
+          settings:
+            newType: 'Neos.Neos:ContentCollection'
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'WebExcess.MultiColumn:ContentCollection.Column'
+      transformations:
+        - type: 'ChangeNodeType'
+          settings:
+            newType: 'Neos.Neos:ContentCollection'
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'WebExcess.MultiColumn:Row'
+      transformations:
+        - type: 'ChangeNodeType'
+          settings:
+            newType: 'JvMTECH.MultiColumn:Content.Row'
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'WebExcess.MultiColumn:Column'
+      transformations:
+        - type: 'ChangeNodeType'
+          settings:
+            newType: 'JvMTECH.MultiColumn:Content.Column'
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'WebExcess.MultiColumn:Break'
+      transformations:
+        - type: 'ChangeNodeType'
+          settings:
+            newType: 'JvMTECH.MultiColumn:Content.Break'
+down:
+  comments: 'No down migration available'

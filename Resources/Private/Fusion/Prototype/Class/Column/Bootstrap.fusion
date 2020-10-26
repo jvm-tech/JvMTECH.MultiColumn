@@ -1,0 +1,59 @@
+prototype(JvMTECH.MultiColumn:Prototype.Class.Column.Bootstrap) < prototype(Neos.Fusion:Component) {
+    width = Neos.Fusion:DataStructure {
+        xs = null
+        sm = null
+        md = null
+        lg = null
+        xl = null
+    }
+    offset = Neos.Fusion:DataStructure {
+        xs = null
+        sm = null
+        md = null
+        lg = null
+        xl = null
+    }
+
+    renderer = Neos.Fusion:DataStructure {
+        element = 'multicolumn-col'
+        column = 'column'
+
+        width = Neos.Fusion:Join {
+            @glue = ' '
+
+            xs = ${props.width.xs == 'col' ? 'col' : 'col-' + props.width.xs}
+            xs.@if.props = ${props.width.xs}
+
+            sm = ${props.width.sm == 'col' ? 'col-sm' : 'col-sm-' + props.width.sm}
+            sm.@if.props = ${props.width.sm}
+
+            md = ${props.width.md == 'col' ? 'col-md' : 'col-md-' + props.width.md}
+            md.@if.props = ${props.width.md}
+
+            lg = ${props.width.lg == 'col' ? 'col-lg' : 'col-lg-' + props.width.lg}
+            lg.@if.props = ${props.width.lg}
+
+            xl = ${props.width.xl == 'col' ? 'col-xl' : 'col-xl-' + props.width.xl}
+            xl.@if.props = ${props.width.xl}
+        }
+
+        offset = Neos.Fusion:Join {
+            @glue = ' '
+
+            xs = ${'offset-' + (props.offset.xs == 'reset' ? '0' : props.offset.xs)}
+            xs.@if.props = ${props.offset.xs}
+
+            sm = ${'offset-sm-' + (props.offset.sm == 'reset' ? '0' : props.offset.sm)}
+            sm.@if.props = ${props.offset.sm}
+
+            md = ${'offset-md-' + (props.offset.md == 'reset' ? '0' : props.offset.md)}
+            md.@if.props = ${props.offset.md}
+
+            lg = ${'offset-lg-' + (props.offset.lg == 'reset' ? '0' : props.offset.lg)}
+            lg.@if.props = ${props.offset.lg}
+
+            xl = ${'offset-xl-' + (props.offset.xl == 'reset' ? '0' : props.offset.xl)}
+            xl.@if.props = ${props.offset.xl}
+        }
+    }
+}

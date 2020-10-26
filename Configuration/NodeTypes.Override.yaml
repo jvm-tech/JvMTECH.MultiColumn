@@ -1,0 +1,5 @@
+Neos.Neos:ContentCollection:
+  constraints:
+    nodeTypes:
+      JvMTECH.MultiColumn:Content.Break: false
+      JvMTECH.MultiColumn:Content.Column: false

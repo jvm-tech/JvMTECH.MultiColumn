@@ -1,0 +1,48 @@
+JvMTECH.MultiColumn:Content.Break:
+  superTypes:
+    Neos.Neos:Content: true
+  ui:
+    label: i18n
+    icon: 'fas fa-minus'
+    position: 'end'
+    group: 'structure'
+    inspector:
+      groups:
+        show:
+          label: i18n
+  properties:
+    show-xs:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.xs'
+        inspector:
+          group: 'show'
+    show-sm:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.sm'
+        inspector:
+          group: 'show'
+    show-md:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.md'
+        inspector:
+          group: 'show'
+    show-lg:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.lg'
+        inspector:
+          group: 'show'
+    show-xl:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.xl'
+        inspector:
+          group: 'show'

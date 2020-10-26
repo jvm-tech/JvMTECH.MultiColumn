@@ -1,0 +1,17 @@
+up:
+  comments: 'Migrate content collection of rows and columns to a flat structure'
+  migration:
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'JvMTECH.MultiColumn:Content.Row'
+      transformations:
+        - type: 'JvMTECH\MultiColumn\ContentRepository\Transformations\FlatStructureTransformation'
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'JvMTECH.MultiColumn:Content.Column'
+      transformations:
+        - type: 'JvMTECH\MultiColumn\ContentRepository\Transformations\FlatStructureTransformation'
+down:
+  comments: 'No down migration available'

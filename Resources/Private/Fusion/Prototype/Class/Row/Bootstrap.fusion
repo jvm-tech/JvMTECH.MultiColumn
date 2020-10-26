@@ -1,0 +1,29 @@
+prototype(JvMTECH.MultiColumn:Prototype.Class.Row.Bootstrap) < prototype(Neos.Fusion:Component) {
+    alignment = Neos.Fusion:DataStructure {
+        xs = null
+        sm = null
+        md = null
+        lg = null
+        xl = null
+    }
+
+    renderer = Neos.Fusion:DataStructure {
+        element = 'multicolumn-row'
+        row = 'row'
+
+        xs = ${'justify-content-' + props.alignment.xs}
+        xs.@if.props = ${props.alignment.xs && props.alignment.xs != 'start'}
+
+        sm = ${'justify-content-sm-' + props.alignment.sm}
+        sm.@if.props = ${props.alignment.sm && props.alignment.sm != 'start'}
+
+        md = ${'justify-content-md-' + props.alignment.md}
+        md.@if.props = ${props.alignment.md && props.alignment.md != 'start'}
+
+        lg = ${'justify-content-lg-' + props.alignment.lg}
+        lg.@if.props = ${props.alignment.lg && props.alignment.lg != 'start'}
+
+        xl = ${'justify-content-xl-' + props.alignment.xl}
+        xl.@if.props = ${props.alignment.xl && props.alignment.xl != 'start'}
+    }
+}

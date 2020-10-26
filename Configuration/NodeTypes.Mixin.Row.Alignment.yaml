@@ -1,0 +1,151 @@
+JvMTECH.MultiColumn:Mixin.Row.Alignment:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Row.Alignment.All: true
+    JvMTECH.MultiColumn:Mixin.Row.Alignment.SM: true
+    JvMTECH.MultiColumn:Mixin.Row.Alignment.MD: true
+    JvMTECH.MultiColumn:Mixin.Row.Alignment.LG: true
+    JvMTECH.MultiColumn:Mixin.Row.Alignment.XL: true
+
+JvMTECH.MultiColumn:Mixin.Row.Alignment.Group:
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        alignment:
+          label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:groups.alignment'
+
+JvMTECH.MultiColumn:Mixin.Row.Alignment.All:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Row.Alignment.Group: true
+  properties:
+    alignment:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.all'
+        reloadIfChanged: true
+        inspector:
+          group: 'alignment'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              start:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.start'
+              center:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.center'
+              end:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.end'
+              around:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.around'
+              between:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.between'
+
+JvMTECH.MultiColumn:Mixin.Row.Alignment.SM:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Row.Alignment.Group: true
+  properties:
+    alignment-sm:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.sm'
+        reloadIfChanged: true
+        inspector:
+          group: 'alignment'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              start:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.start'
+              center:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.center'
+              end:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.end'
+              around:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.around'
+              between:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.between'
+
+JvMTECH.MultiColumn:Mixin.Row.Alignment.MD:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Row.Alignment.Group: true
+  properties:
+    alignment-md:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.md'
+        reloadIfChanged: true
+        inspector:
+          group: 'alignment'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              start:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.start'
+              center:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.center'
+              end:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.end'
+              around:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.around'
+              between:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.between'
+
+JvMTECH.MultiColumn:Mixin.Row.Alignment.LG:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Row.Alignment.Group: true
+  properties:
+    alignment-lg:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.lg'
+        reloadIfChanged: true
+        inspector:
+          group: 'alignment'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              start:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.start'
+              center:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.center'
+              end:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.end'
+              around:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.around'
+              between:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.between'
+
+JvMTECH.MultiColumn:Mixin.Row.Alignment.XL:
+  abstract: true
+  superTypes:
+    JvMTECH.MultiColumn:Mixin.Row.Alignment.Group: true
+  properties:
+    alignment-xl:
+      type: string
+      ui:
+        label: 'JvMTECH.MultiColumn:Main:size.xl'
+        reloadIfChanged: true
+        inspector:
+          group: 'alignment'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              start:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.start'
+              center:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.center'
+              end:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.end'
+              around:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.around'
+              between:
+                label: 'JvMTECH.MultiColumn:NodeTypes.Content.Row:properties.alignment.selectBoxEditor.values.between'

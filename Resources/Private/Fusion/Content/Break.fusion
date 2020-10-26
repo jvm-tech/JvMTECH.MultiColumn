@@ -1,0 +1,20 @@
+prototype(JvMTECH.MultiColumn:Content.Break) < prototype(Neos.Neos:ContentComponent) {
+    class = JvMTECH.MultiColumn:Prototype.Class.Break
+    renderer = afx`<div class={props.class}></div>`
+    renderer.content = ${WebExcessI18nBackend.translate(Neos.Rendering.labelForNodeType(node.nodeType.name))}
+    renderer.content.@if.backend = ${node.context.inBackend}
+
+    @cache {
+        mode = 'cached'
+
+        entryIdentifier {
+            node = ${node}
+            documentNode = ${documentNode}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+        }
+
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+        }
+    }
+}

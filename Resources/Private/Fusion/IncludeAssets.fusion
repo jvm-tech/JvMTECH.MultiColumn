@@ -1,0 +1,13 @@
+prototype(Neos.Neos:Page) {
+    head.multicolumn = Neos.Fusion:Tag {
+        tagName = 'link'
+        attributes {
+            rel = 'stylesheet'
+            href = Neos.Fusion:ResourceUri {
+                path = 'resource://JvMTECH.MultiColumn/Public/MultiColumn.css'
+            }
+        }
+        @if.isEnabled = ${Configuration.setting('JvMTECH.MultiColumn.includeCss') && node.context.inBackend ? true : false}
+        @position = 'end'
+    }
+}

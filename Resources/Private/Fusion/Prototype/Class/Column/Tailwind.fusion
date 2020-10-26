@@ -1,0 +1,60 @@
+prototype(JvMTECH.MultiColumn:Prototype.Class.Column.Tailwind) < prototype(Neos.Fusion:Component) {
+    width = Neos.Fusion:DataStructure {
+        xs = null
+        sm = null
+        md = null
+        lg = null
+        xl = null
+    }
+    offset = Neos.Fusion:DataStructure {
+        xs = null
+        sm = null
+        md = null
+        lg = null
+        xl = null
+    }
+
+    renderer = Neos.Fusion:DataStructure {
+        element = 'multicolumn-col'
+        gap = ${'my-'+Configuration.setting('JvMTECH.MultiColumn.gap')+' px-'+Configuration.setting('JvMTECH.MultiColumn.gap')}
+        full = ${props.width.xs != 'auto' ? 'w-full' : null}
+
+        width = Neos.Fusion:Join {
+            @glue = ' '
+
+            xs = ${props.width.xs == 'col' ? 'flex-1' : 'w-' + props.width.xs + (props.width.xs == 'auto' ? null : '/12')}
+            xs.@if.props = ${props.width.xs}
+
+            sm = ${props.width.sm == 'col' ? 'sm:flex-1' : 'sm:w-' + props.width.sm + (props.width.sm == 'auto' ? null : '/12')}
+            sm.@if.props = ${props.width.sm}
+
+            md = ${props.width.md == 'col' ? 'md:flex-1' : 'md:w-' + props.width.md + (props.width.md == 'auto' ? null : '/12')}
+            md.@if.props = ${props.width.md}
+
+            lg = ${props.width.lg == 'col' ? 'lg:flex-1' : 'lg:w-' + props.width.lg + (props.width.lg == 'auto' ? null : '/12')}
+            lg.@if.props = ${props.width.lg}
+
+            xl = ${props.width.xl == 'col' ? 'xl:flex-1' : 'xl:w-' + props.width.xl + (props.width.xl == 'auto' ? null : '/12')}
+            xl.@if.props = ${props.width.xl}
+        }
+
+        offset = Neos.Fusion:Join {
+            @glue = ' '
+
+            xs = ${props.offset.xs == 'reset' ? 'ml-0' : 'ml-' + props.offset.xs + '/12'}
+            xs.@if.props = ${props.offset.xs}
+
+            sm = ${props.offset.sm == 'reset' ? 'sm:ml-0' : 'sm:ml-' + props.offset.sm + '/12'}
+            sm.@if.props = ${props.offset.sm}
+
+            md = ${props.offset.md == 'reset' ? 'md:ml-0' : 'md:ml-' + props.offset.md + '/12'}
+            md.@if.props = ${props.offset.md}
+
+            lg = ${props.offset.lg == 'reset' ? 'lg:ml-0' : 'lg:ml-' + props.offset.lg + '/12'}
+            lg.@if.props = ${props.offset.lg}
+
+            xl = ${props.offset.xl == 'reset' ? 'xl:ml-0' : 'xl:ml-' + props.offset.xl + '/12'}
+            xl.@if.props = ${props.offset.xl}
+        }
+    }
+}

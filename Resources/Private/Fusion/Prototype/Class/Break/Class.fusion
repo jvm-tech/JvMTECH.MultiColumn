@@ -1,0 +1,24 @@
+prototype(JvMTECH.MultiColumn:Prototype.Class.Break) < prototype(Neos.Fusion:Component) {
+    show = Neos.Fusion:DataStructure {
+        xs = ${node.context.inBackend || q(node).property('show-xs')}
+        sm = ${node.context.inBackend || q(node).property('show-sm')}
+        md = ${node.context.inBackend || q(node).property('show-md')}
+        lg = ${node.context.inBackend || q(node).property('show-lg')}
+        xl = ${node.context.inBackend || q(node).property('show-xl')}
+    }
+
+    renderer = Neos.Fusion:Case {
+        bootstrap {
+            condition = ${Configuration.setting('JvMTECH.MultiColumn.framework') == 'bootstrap'}
+            renderer = JvMTECH.MultiColumn:Prototype.Class.Break.Bootstrap {
+                @apply.props = ${props}
+            }
+        }
+        tailwindcss {
+            condition = ${true}
+            renderer = JvMTECH.MultiColumn:Prototype.Class.Break.Tailwind {
+                @apply.props = ${props}
+            }
+        }
+    }
+}
