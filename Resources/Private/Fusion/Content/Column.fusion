@@ -6,8 +6,8 @@ prototype(JvMTECH.MultiColumn:Content.Column) < prototype(Neos.Neos:ContentCompo
         mode = 'cached'
 
         entryIdentifier {
-            node = ${node}
-            documentNode = ${documentNode}
+            node = ${Neos.Caching.entryIdentifierForNode(node)}
+            documentNode = ${Neos.Caching.entryIdentifierForNode(documentNode)}
             editPreviewMode = ${node.context.currentRenderingMode.name}
         }
 

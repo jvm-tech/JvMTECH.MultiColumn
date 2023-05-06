@@ -69,20 +69,4 @@ JvMTECH.MultiColumn:Content.Column:
 
 ## Upgrade from *WebExcess.MultiColumn*
 
-If you upgrade from the *WebExcess.MultiColumn* package, you have to do some code and node migrations.
-
-```
-./flow flow:core:migrate <Your.Package> --version 20201022140500
-./flow node:migrate --version 20201022135200
-./flow node:migrate --version 20201022141600
-```
-
-And change the grid rendering to Bootstrap
-
-```
-JvMTECH:
-  MultiColumn:
-    framework: 'bootstrap'
-```
-
-NOTE: In the old *WebExcess.MultiColumn* package, we had some column constraint mixin. In the new package this has to be handled by your own.
+If you upgrade from the *WebExcess.MultiColumn* package, do first an upgrade to Neos 8.3.

@@ -4,6 +4,7 @@ JvMTECH.MultiColumn:Content.Row:
     Neos.Neos:ContentCollection: true
     WebExcess.Label:Show: true
     JvMTECH.MultiColumn:Mixin.Row.Alignment: true
+    'Neos.Demo:Constraint.Content.Column': true
   ui:
     label: i18n
     icon: 'fas fa-columns'

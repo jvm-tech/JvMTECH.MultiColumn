@@ -1,10 +1,10 @@
 prototype(JvMTECH.MultiColumn:Prototype.Class.Break) < prototype(Neos.Fusion:Component) {
     show = Neos.Fusion:DataStructure {
-        xs = ${node.context.inBackend || q(node).property('show-xs')}
-        sm = ${node.context.inBackend || q(node).property('show-sm')}
-        md = ${node.context.inBackend || q(node).property('show-md')}
-        lg = ${node.context.inBackend || q(node).property('show-lg')}
-        xl = ${node.context.inBackend || q(node).property('show-xl')}
+        xs = ${Neos.Node.inBackend(node) || q(node).property('show-xs')}
+        sm = ${Neos.Node.inBackend(node) || q(node).property('show-sm')}
+        md = ${Neos.Node.inBackend(node) || q(node).property('show-md')}
+        lg = ${Neos.Node.inBackend(node) || q(node).property('show-lg')}
+        xl = ${Neos.Node.inBackend(node) || q(node).property('show-xl')}
     }
 
     renderer = Neos.Fusion:Case {
