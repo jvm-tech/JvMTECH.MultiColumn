@@ -2,7 +2,7 @@ prototype(JvMTECH.MultiColumn:Content.Row) < prototype(Neos.Neos:ContentComponen
     class = JvMTECH.MultiColumn:Prototype.Class.Row
     renderer = afx`<div class={props.class}><Neos.Neos:ContentCollectionRenderer /></div>`
     renderer.@process.wrap = afx`<div class="jvmtech-multicolumn"><Neos.Fusion:Augmenter data-__neos-insertion-anchor>{value}</Neos.Fusion:Augmenter></div>`
-    renderer.@process.wrap.@if.backend = ${Neos.Node.inBackend(node)}
+    renderer.@process.wrap.@if.backend = ${renderingMode.isEdit}
 
     @cache {
         mode = 'cached'

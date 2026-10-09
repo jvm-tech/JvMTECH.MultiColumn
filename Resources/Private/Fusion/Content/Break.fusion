@@ -1,8 +1,8 @@
 prototype(JvMTECH.MultiColumn:Content.Break) < prototype(Neos.Neos:ContentComponent) {
     class = JvMTECH.MultiColumn:Prototype.Class.Break
     renderer = afx`<div class={props.class}></div>`
-    renderer.content = ${node.label}
-    renderer.content.@if.backend = ${Neos.Node.inBackend(node)}
+    renderer.content = ${Neos.Node.label(node)}
+    renderer.content.@if.backend = ${renderingMode.isEdit}
 
     @cache {
         mode = 'cached'

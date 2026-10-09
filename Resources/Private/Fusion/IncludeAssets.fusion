@@ -7,7 +7,7 @@ prototype(Neos.Neos:Page) {
                 path = 'resource://JvMTECH.MultiColumn/Public/MultiColumn.css'
             }
         }
-        @if.isEnabled = ${Configuration.setting('JvMTECH.MultiColumn.includeCss') && Neos.Node.inBackend(node) ? true : false}
+        @if.isEnabled = ${Configuration.setting('JvMTECH.MultiColumn.includeCss') && (renderingMode.isEdit || renderingMode.isPreview) ? true : false}
         @position = 'end'
     }
 }

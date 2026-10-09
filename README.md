@@ -18,6 +18,7 @@ Tailwind CSS / Bootstrap grid for Neos CMS
 - Requires Neos 9. Run the Neos 9 content migration (`site:exportLegacyData` / `site:importAll`) as usual; node type names are unchanged.
 - The dependency on `webexcess/label` was removed. Row and column labels in the backend use the Neos core label mechanism.
 - The legacy `FlatStructureTransformation` node migration was removed (it only applied to Neos ≤ 8).
+- Backend detection now uses the Fusion `renderingMode` (`isEdit` / `isPreview`) instead of `node.context.inBackend` / `Neos.Node.inBackend(node)`.
 
 ## Installation
 ```
