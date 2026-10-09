@@ -6,6 +6,19 @@ Tailwind CSS / Bootstrap grid for Neos CMS
 
 ![JvM.MultiColumn](Documentation/preview.gif "JvM.MultiColumn")
 
+## Compatibility
+
+| Version | Neos |
+|---------|------|
+| 2.x     | 9.x  |
+| 1.x     | 5.3 – 8.x |
+
+### Upgrading from 1.x
+
+- Requires Neos 9. Run the Neos 9 content migration (`site:exportLegacyData` / `site:importAll`) as usual; node type names are unchanged.
+- The dependency on `webexcess/label` was removed. Row and column labels in the backend use the Neos core label mechanism.
+- The legacy `FlatStructureTransformation` node migration was removed (it only applied to Neos ≤ 8).
+
 ## Installation
 ```
 composer require jvmtech/multicolumn
