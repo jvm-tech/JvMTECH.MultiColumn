@@ -13,3 +13,4 @@ JvMTECH:
     framework: 'tailwindcss' # 'tailwindcss' or 'bootstrap'
     gap: 4 # column gap
     includeCss: true
+    showLabels: true # grey row/column label bars in the editing canvas

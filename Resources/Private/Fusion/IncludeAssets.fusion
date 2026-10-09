@@ -10,4 +10,16 @@ prototype(Neos.Neos:Page) {
         @if.isEnabled = ${Configuration.setting('JvMTECH.MultiColumn.includeCss') && (renderingMode.isEdit || renderingMode.isPreview) ? true : false}
         @position = 'end'
     }
+
+    head.multicolumnBackendLabels = Neos.Fusion:Tag {
+        tagName = 'link'
+        attributes {
+            rel = 'stylesheet'
+            href = Neos.Fusion:ResourceUri {
+                path = 'resource://JvMTECH.MultiColumn/Public/Backend.css'
+            }
+        }
+        @if.isEnabled = ${Configuration.setting('JvMTECH.MultiColumn.includeCss') && Configuration.setting('JvMTECH.MultiColumn.showLabels') && renderingMode.isEdit ? true : false}
+        @position = 'end'
+    }
 }

@@ -16,7 +16,9 @@ Tailwind CSS / Bootstrap grid for Neos CMS
 ### Upgrading from 1.x
 
 - Requires Neos 9. Run the Neos 9 content migration (`site:exportLegacyData` / `site:importAll`) as usual; node type names are unchanged.
-- The dependency on `webexcess/label` was removed. Row and column labels in the backend use the Neos core label mechanism.
+- The dependency on `webexcess/label` was removed. The grey row and column label bars in the editing canvas are now
+  rendered by this package itself (`data-node-label` + `Resources/Public/Backend.css`, edit mode only). Disable them with
+  `JvMTECH.MultiColumn.showLabels: false`.
 - The legacy `FlatStructureTransformation` node migration was removed (it only applied to Neos ≤ 8).
 - Backend detection now uses the Fusion `renderingMode` (`isEdit` / `isPreview`) instead of `node.context.inBackend` / `Neos.Node.inBackend(node)`.
 
@@ -26,6 +28,17 @@ composer require jvmtech/multicolumn
 ```
 
 ## Configuration
+
+### Labels in the editing canvas
+
+In edit mode, rows and columns show a grey bar with their translated node type label (in the editor's interface
+language). The frontend output is not affected. To disable it:
+
+```
+JvMTECH:
+  MultiColumn:
+    showLabels: false
+```
 
 ### Change grid rendering Tailwind CSS / Bootstrap
 

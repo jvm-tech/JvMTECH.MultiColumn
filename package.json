@@ -14,8 +14,8 @@
   ],
   "scripts": {
     "clean": "rimraf Resources/Public",
-    "compile": "postcss Resources/Private/Assets/MultiColumn.pcss --output Resources/Public/MultiColumn.css",
-    "minify": "cleancss --source-map --source-map-inline-sources --output Resources/Public/MultiColumn.css Resources/Public/MultiColumn.css",
+    "compile": "postcss Resources/Private/Assets/MultiColumn.pcss --output Resources/Public/MultiColumn.css && postcss Resources/Private/Assets/Backend.pcss --output Resources/Public/Backend.css --no-map",
+    "minify": "cleancss --source-map --source-map-inline-sources --output Resources/Public/MultiColumn.css Resources/Public/MultiColumn.css && cleancss --output Resources/Public/Backend.css Resources/Public/Backend.css",
     "dev": "npm run compile -- --watch",
     "build": "npm run clean && npm run compile && npm run minify",
     "start": "npm run dev"

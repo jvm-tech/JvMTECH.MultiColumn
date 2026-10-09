@@ -1,0 +1,25 @@
+/* Grey label bar for rows and columns in the editing canvas (edit mode only). */
+:root {
+    --jvmtech-multicolumn-label-color: #fff;
+    --jvmtech-multicolumn-label-background: #999;
+}
+
+[data-node-label] {
+    &::before {
+        content: attr(data-node-label);
+        display: block;
+        cursor: pointer;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        color: var(--jvmtech-multicolumn-label-color);
+        font-size: 90%;
+        font-weight: normal;
+        font-family: 'Open Sans', sans-serif;
+        background-color: var(--jvmtech-multicolumn-label-background);
+    }
+
+    &:empty::before {
+        margin-bottom: 0;
+    }
+}

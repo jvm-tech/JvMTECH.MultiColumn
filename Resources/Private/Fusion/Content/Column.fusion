@@ -2,6 +2,10 @@ prototype(JvMTECH.MultiColumn:Content.Column) < prototype(Neos.Neos:ContentCompo
     class = JvMTECH.MultiColumn:Prototype.Class.Column
     renderer = afx`<div class={props.class}><Neos.Neos:ContentCollectionRenderer /></div>`
 
+    # Grey label bar in the editing canvas (ContentElementWrapping only renders in edit mode)
+    @process.contentElementWrapping.expression.additionalAttributes.data-node-label = JvMTECH.MultiColumn:Prototype.BackendLabel
+    @process.contentElementWrapping.expression.additionalAttributes.data-node-label.@if.enabled = ${renderingMode.isEdit && Configuration.setting('JvMTECH.MultiColumn.showLabels') ? true : false}
+
     @cache {
         mode = 'cached'
 

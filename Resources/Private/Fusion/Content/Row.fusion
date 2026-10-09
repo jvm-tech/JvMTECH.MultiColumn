@@ -4,6 +4,10 @@ prototype(JvMTECH.MultiColumn:Content.Row) < prototype(Neos.Neos:ContentComponen
     renderer.@process.wrap = afx`<div class="jvmtech-multicolumn"><Neos.Fusion:Augmenter data-__neos-insertion-anchor>{value}</Neos.Fusion:Augmenter></div>`
     renderer.@process.wrap.@if.backend = ${renderingMode.isEdit}
 
+    # Grey label bar in the editing canvas (ContentElementWrapping only renders in edit mode)
+    @process.contentElementWrapping.expression.additionalAttributes.data-node-label = JvMTECH.MultiColumn:Prototype.BackendLabel
+    @process.contentElementWrapping.expression.additionalAttributes.data-node-label.@if.enabled = ${renderingMode.isEdit && Configuration.setting('JvMTECH.MultiColumn.showLabels') ? true : false}
+
     @cache {
         mode = 'cached'
 

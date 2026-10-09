@@ -1,0 +1,17 @@
+# Translated node type label of the current node, in the backend user's interface language.
+# Used as `data-node-label` on rows and columns in the editing canvas (see Backend.css).
+prototype(JvMTECH.MultiColumn:Prototype.BackendLabel) < prototype(Neos.Fusion:Component) {
+    labelId = ${Neos.Node.nodeType(node).label}
+
+    renderer = Neos.Fusion:Case {
+        shortHand {
+            @context.parts = ${String.split(props.labelId, ':')}
+            condition = ${Array.length(parts) == 3}
+            renderer = ${Translation.id(parts[2]).package(parts[0]).source(String.replace(parts[1], '.', '/')).locale(Neos.Backend.interfaceLanguage()).translate() || props.labelId}
+        }
+        plain {
+            condition = true
+            renderer = ${props.labelId}
+        }
+    }
+}
