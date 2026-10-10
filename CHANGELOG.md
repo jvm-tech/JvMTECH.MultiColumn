@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0
+## 2.0.0 (2026-10-10)
 
 Neos 9 support. Requires `neos/neos` ^9.0; use 1.x for Neos 5.3 – 8.x.
 
